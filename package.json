@@ -1,0 +1,26 @@
+{
+  "name": "beaglebone-temperature-monitor",
+  "version": "1.0.0",
+  "description": "A simple monitor for BeagleBone Black + TMP75 sensor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "monitor",
+    "beaglebone",
+    "bbb",
+    "temperature"
+  ],
+  "author": "Yume Maruyama",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~4.16.4"
+  },
+  "devDependencies": {
+    "ejs": "~2.6.1"
+  }
+}

@@ -8,7 +8,12 @@ Real-time temperature monitor powered by Beaglebone Black + TMP75, providing int
  - React (for front-end)
  - express (for back-end)
  - honoka (fetch() polyfill)
+ - ant design
  - echarts
+
+# Theory
+
+TMP75 uses i2c protocol to send temperature data. In BeagleBone's Debian system, we can run `i2cdetect -y -r 1` to obtain the address of TMP75; and when we run `i2cget -y -f 1 0xyy` (`yy` is the address you get from `i2cdetect`), it will returns a hex which is the temperature. We can integrate these operations into a web-server so that we can get data / send requests from browser front-end.
 
 # Usage
 
@@ -26,12 +31,16 @@ $ cd beaglebone-tempature-monitor
 $ npm install
 ```
 
-Modify your config(you should specify the GPIO port), and run:
+Modify your config(App can detect your i2c address automatically, but you should specify the GPIO port), and run:
 ```bash
-$ node index.js
+$ npm start
 ```
 
 Open your browser (default port is 2333): `http://192.168.7.2:2333`
+
+# Screenshot
+
+![screenshot](screenshot.png)
 
 # License
 
