@@ -24,11 +24,11 @@ const init = () => {
     }
   });
 };
-
-let currentTemperature = 0;
-
 init();
 
+let currentTemperature = 0;       // 当前温度
+
+// 初始化 express
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
