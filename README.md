@@ -31,9 +31,15 @@ $ cd beaglebone-tempature-monitor
 $ npm install
 ```
 
-Modify your config(App can detect your i2c address automatically, but you should specify the GPIO port), and run:
+Modify your config file. Note that app can detect your i2c address automatically, but you should specify the GPIO port):
+```bash
+nano config.js
+```
+
+Then run:
 ```bash
 $ npm start
+# or: $ node index.js
 ```
 
 Open your browser (default port is 2333): `http://192.168.7.2:2333`
@@ -44,4 +50,4 @@ Open your browser (default port is 2333): `http://192.168.7.2:2333`
 
 # License
 
-This project is my tutorial experiment in XMU IS&E, and it is MIT licensed.
+This project is my tutorial experiment in XMU. It is MIT licensed.
